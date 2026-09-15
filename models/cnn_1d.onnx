@@ -1,0 +1,418 @@
+
+pytorch
+2.14.0+cpu:ﬂí
+∞
+input
+features.0.weight
+features.0.bias
+features.0.running_mean
+features.0.running_vargetitem,node__native_batch_norm_legit_no_training__0"BatchNormalization*
+epsilon¨≈'7†*
+momentumfff?†J‰
+	namespace÷: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.0: torch.nn.modules.batchnorm.BatchNorm1d/_native_batch_norm_legit_no_training: aten._native_batch_norm_legit_no_training.defaultJ»
+pkg.torch.onnx.class_hierarchy•['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.batchnorm.BatchNorm1d', 'aten._native_batch_norm_legit_no_training.default']J´
+pkg.torch.onnx.fx_nodeê%_native_batch_norm_legit_no_training : [num_users=1] = call_function[target=torch.ops.aten._native_batch_norm_legit_no_training.default](args = (%x, %p_features_0_weight, %p_features_0_bias, %b_features_0_running_mean, %b_features_0_running_var, 0.1, 1e-05), kwargs = {})Jd
+pkg.torch.onnx.name_scopesF['', 'features', 'features.0', '_native_batch_norm_legit_no_training']Jô
+pkg.torch.onnx.stack_trace˙File "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\batchnorm.py", line 210, in forward
+    return F.batch_norm(
+∏	
+getitem
+features.1.weight
+features.1.biasconv1dnode_conv1d"Conv*
+kernel_shape@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@†*
+strides@†*
+pads@@†Jû
+	namespaceê: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.1: torch.nn.modules.conv.Conv1d/conv1d: aten.conv1d.defaultJü
+pkg.torch.onnx.class_hierarchy}['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv1d', 'aten.conv1d.default']Jº
+pkg.torch.onnx.fx_node°%conv1d : [num_users=1] = call_function[target=torch.ops.aten.conv1d.default](args = (%getitem, %p_features_1_weight, %p_features_1_bias, [2], [2]), kwargs = {})JF
+pkg.torch.onnx.name_scopes(['', 'features', 'features.1', 'conv1d']J∏
+pkg.torch.onnx.stack_traceôFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\conv.py", line 385, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+„
+conv1drelu	node_relu"ReluJû
+	namespaceê: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.2: torch.nn.modules.activation.ReLU/relu: aten.relu.defaultJ°
+pkg.torch.onnx.class_hierarchy['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']JÉ
+pkg.torch.onnx.fx_nodei%relu : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv1d,), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'features', 'features.2', 'relu']J∞
+pkg.torch.onnx.stack_traceëFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+º	
+relu
+features.3.weight
+features.3.biasconv1d_1node_conv1d_1"Conv*
+kernel_shape@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@†*
+strides@†*
+pads@@†J†
+	namespaceí: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.3: torch.nn.modules.conv.Conv1d/conv1d_1: aten.conv1d.defaultJü
+pkg.torch.onnx.class_hierarchy}['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv1d', 'aten.conv1d.default']Jª
+pkg.torch.onnx.fx_node†%conv1d_1 : [num_users=1] = call_function[target=torch.ops.aten.conv1d.default](args = (%relu, %p_features_3_weight, %p_features_3_bias, [2], [2]), kwargs = {})JH
+pkg.torch.onnx.name_scopes*['', 'features', 'features.3', 'conv1d_1']J∏
+pkg.torch.onnx.stack_traceôFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\conv.py", line 385, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+Ò
+conv1d_1relu_1node_relu_1"ReluJ†
+	namespaceí: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.4: torch.nn.modules.activation.ReLU/relu_1: aten.relu.defaultJ°
+pkg.torch.onnx.class_hierarchy['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_1 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv1d_1,), kwargs = {})JF
+pkg.torch.onnx.name_scopes(['', 'features', 'features.4', 'relu_1']J∞
+pkg.torch.onnx.stack_traceëFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+¿	
+relu_1
+features.5.weight
+features.5.biasconv1d_2node_conv1d_2"Conv*
+kernel_shape@†*
+group†*
+auto_pad"NOTSET†*
+	dilations@†*
+strides@†*
+pads@@†J†
+	namespaceí: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.5: torch.nn.modules.conv.Conv1d/conv1d_2: aten.conv1d.defaultJü
+pkg.torch.onnx.class_hierarchy}['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv1d', 'aten.conv1d.default']JΩ
+pkg.torch.onnx.fx_node¢%conv1d_2 : [num_users=1] = call_function[target=torch.ops.aten.conv1d.default](args = (%relu_1, %p_features_5_weight, %p_features_5_bias, [2], [1]), kwargs = {})JH
+pkg.torch.onnx.name_scopes*['', 'features', 'features.5', 'conv1d_2']J∏
+pkg.torch.onnx.stack_traceôFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\conv.py", line 385, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+Ò
+conv1d_2relu_2node_relu_2"ReluJ†
+	namespaceí: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.6: torch.nn.modules.activation.ReLU/relu_2: aten.relu.defaultJ°
+pkg.torch.onnx.class_hierarchy['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Já
+pkg.torch.onnx.fx_nodem%relu_2 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%conv1d_2,), kwargs = {})JF
+pkg.torch.onnx.name_scopes(['', 'features', 'features.6', 'relu_2']J∞
+pkg.torch.onnx.stack_traceëFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\activation.py", line 143, in forward
+    return F.relu(input, inplace=self.inplace)
+∏
+relu_2
+val_9	unsqueezenode_unsqueeze"	UnsqueezeJ≤
+	namespace§: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.7: torch.nn.modules.pooling.AdaptiveAvgPool1d/unsqueeze: aten.unsqueeze.defaultJ±
+pkg.torch.onnx.class_hierarchyé['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pooling.AdaptiveAvgPool1d', 'aten.unsqueeze.default']Jê
+pkg.torch.onnx.fx_nodev%unsqueeze : [num_users=1] = call_function[target=torch.ops.aten.unsqueeze.default](args = (%relu_2, -2), kwargs = {})JI
+pkg.torch.onnx.name_scopes+['', 'features', 'features.7', 'unsqueeze']Jπ
+pkg.torch.onnx.stack_traceöFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\pooling.py", line 1474, in forward
+    return F.adaptive_avg_pool1d(input, self.output_size)
+∆
+	unsqueeze
+val_12mean	node_mean"
+ReduceMean*
+keepdims†*
+noop_with_empty_axes †J§
+	namespaceñ: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.7: torch.nn.modules.pooling.AdaptiveAvgPool1d/mean: aten.mean.dimJ®
+pkg.torch.onnx.class_hierarchyÖ['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pooling.AdaptiveAvgPool1d', 'aten.mean.dim']Jë
+pkg.torch.onnx.fx_nodew%mean : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%unsqueeze, [-1, -2], True), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'features', 'features.7', 'mean']Jπ
+pkg.torch.onnx.stack_traceöFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\pooling.py", line 1474, in forward
+    return F.adaptive_avg_pool1d(input, self.output_size)
+ñ
+mean
+val_9squeezenode_squeeze"SqueezeJ™
+	namespaceú: ai.models.cnn_1d.CNN1DNet/features: torch.nn.modules.container.Sequential/features.7: torch.nn.modules.pooling.AdaptiveAvgPool1d/squeeze: aten.squeeze.dimJ´
+pkg.torch.onnx.class_hierarchyà['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pooling.AdaptiveAvgPool1d', 'aten.squeeze.dim']JÜ
+pkg.torch.onnx.fx_nodel%squeeze : [num_users=1] = call_function[target=torch.ops.aten.squeeze.dim](args = (%mean, -2), kwargs = {})JG
+pkg.torch.onnx.name_scopes)['', 'features', 'features.7', 'squeeze']Jπ
+pkg.torch.onnx.stack_traceöFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 38, in forward
+    x = self.features(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\container.py", line 259, in forward
+    input = module(input)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\pooling.py", line 1474, in forward
+    return F.adaptive_avg_pool1d(input, self.output_size)
+Ó
+squeeze
+val_17viewnode_Reshape_19"Reshape*
+	allowzero†J@
+	namespace3: ai.models.cnn_1d.CNN1DNet/view: aten.view.defaultJ<
+!pkg.onnxscript.rewriter.rule_nameMaterializeReshapeShapeJT
+pkg.torch.onnx.class_hierarchy2['ai.models.cnn_1d.CNN1DNet', 'aten.view.default']Jõ
+pkg.torch.onnx.fx_nodeÄ%view : [num_users=1] = call_function[target=torch.ops.aten.view.default](args = (%squeeze, [%sym_size_int_1, -1]), kwargs = {})J*
+pkg.torch.onnx.name_scopes['', 'view']Jà
+pkg.torch.onnx.stack_tracejFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 39, in forward
+    x = x.view(x.size(0), -1)
+á
+view
+classifier.weight
+classifier.biasoutputnode_linear"Gemm*
+transA †*
+transB†*
+alpha  Ä?†*
+beta  Ä?†Jo
+	namespaceb: ai.models.cnn_1d.CNN1DNet/classifier: torch.nn.modules.linear.Linear/linear: aten.linear.defaultJx
+pkg.torch.onnx.class_hierarchyV['ai.models.cnn_1d.CNN1DNet', 'torch.nn.modules.linear.Linear', 'aten.linear.default']JØ
+pkg.torch.onnx.fx_nodeî%linear : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%view, %p_classifier_weight, %p_classifier_bias), kwargs = {})J:
+pkg.torch.onnx.name_scopes['', 'classifier', 'linear']Jß
+pkg.torch.onnx.stack_traceàFile "C:\Users\dhars\Desktop\RAVEN\ai\models\cnn_1d.py", line 40, in forward
+    x = self.classifier(x)
+  File "C:\Users\dhars\Desktop\RAVEN\venv\lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+main_graph*A
+Bfeatures.0.weightJ(æà?°Œã?©‘Ñ?|å?	:ì?$[|?ùDÄ?é{É?ïhå?  Ä?*?
+Bfeatures.0.biasJ(ßVK=˘"º,ŸTΩÓÒ]=–…'=—"è<"áªÅñÚ<—‚4=È$Ω*[
+Bfeatures.1.weightj
+locationcnn_1d.onnx.dataj
+offset2048j
+length3200p*WBfeatures.1.biasJ@
+1å=fó„=2£=‘öÉΩÉí0Ω˜HiΩT·>§/“ª¬ÿ∫<π˜Ω¿Üå=ß;{<ﬂ`:>3l>éâí=t—)>*\ Bfeatures.3.weightj
+locationcnn_1d.onnx.dataj
+offset5248j
+length10240p*ò Bfeatures.3.biasJÄﬁx˝ªh„◊=û◊=›˚µΩ«µ';L°◊= V‡ºù·∂ΩbûõºÃ‚q>L€>YDÎºç[‘=ˇQær,∏ΩIÉc=…Í‚=Q[>i<ÅÔG=™I<ΩT’∫æk> ΩΩ◊ôFº1∏GΩ’üΩ# Ωñb«=Ñ>*2ΩœM¿Ω*]@ Bfeatures.5.weightj
+locationcnn_1d.onnx.dataj
+offset15488j
+length24576p*ò@Bfeatures.5.biasJÄ.œ=˚óóΩúìΩòKP=‹)%ºŒ2®Ωcúª˙mÅΩŸÿ=»BΩÓì><Xƒ=õÅ´<∞6>[8nº2/ä=meU<G¸wº&8øΩè#[>Ü≠√ºï÷•º∫ãŸ=ÒÅ=©Ó=´u$æ^≥ÒΩÑÕ.>v{ΩßêBΩ≤ˆçΩA>√{æ}éí=h >¢«Î=Ó‘3=WÇΩóR=yÿ∫„è=ãråΩ"Ì[Ω':=ºó=ûΩ=)Fí=∫ävΩi#ÕΩQ->4•=q=€Ω}æ<ÃL∫;§⁄ñΩÁ˚±º®˛<Ew&=ŒêΩ/gπ<`]÷=0œº—bΩ*V@Bclassifier.weightj
+locationcnn_1d.onnx.dataj
+offset0j
+length2048p*7Bclassifier.biasJ £õ >îæC/ÚΩ¶æAÛú;ﬁ–=[=HÃΩ*G
+Bfeatures.0.running_meanJ(Œ0ΩA–›CBb¯∫¨‹Œπ5?≤Ω›˚ ;-˙≥Ω√∞<C    *F
+Bfeatures.0.running_varJ(J–ØBÏöFA,)<ô—8Ú*ë=J„É>W)u>0›e@ï˚œD#íﬁ*Bval_12Jˇˇˇˇˇˇˇˇ˛ˇˇˇˇˇˇˇ*Bval_9J˛ˇˇˇˇˇˇˇ*Bval_17Jˇˇˇˇˇˇˇˇ@       ZÃ
+input
+
+
+batch_size
+
+
+Ä"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"&
+!pkg.torch.onnx.original_node_namexbê
+output
+
+
+batch_size
+"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"+
+!pkg.torch.onnx.original_node_namelinearj÷
+features.0.weight
+
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
+!pkg.torch.onnx.original_node_namep_features_0_weightj“
+features.0.bias
+
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_features_0_biasjﬁ
+features.1.weight
+
+
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
+!pkg.torch.onnx.original_node_namep_features_1_weightj“
+features.1.bias
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_features_1_biasjﬁ
+features.3.weight
+
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
+!pkg.torch.onnx.original_node_namep_features_3_weightj“
+features.3.bias
+
+
+ "<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_features_3_biasjﬁ
+features.5.weight
+
+@
+ 
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
+!pkg.torch.onnx.original_node_namep_features_5_weightj“
+features.5.bias
+
+
+@"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_features_5_biasj⁄
+classifier.weight
+
+
+@"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
+!pkg.torch.onnx.original_node_namep_classifier_weightj“
+classifier.bias
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_classifier_biasjﬂ
+features.0.running_mean
+
+
+
+"9
+/pkg.torch.export.graph_signature.InputSpec.kindBUFFER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentTrue">
+!pkg.torch.onnx.original_node_nameb_features_0_running_meanj›
+features.0.running_var
+
+
+
+"9
+/pkg.torch.export.graph_signature.InputSpec.kindBUFFER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentTrue"=
+!pkg.torch.onnx.original_node_nameb_features_0_running_varjR
+val_12
+
+
+"<
+$pkg.onnxscript.optimizer.folded_from['val_10', 'val_11']j
+val_9
+
+
+j
+val_17
+
+
+j(
+getitem
+
+
+batch_size
+
+
+Äj&
+conv1d
+
+
+batch_size
+
+@j$
+relu
+
+
+batch_size
+
+@j(
+conv1d_1
+
+
+batch_size
+ 
+ j&
+relu_1
+
+
+batch_size
+ 
+ j(
+conv1d_2
+
+
+batch_size
+@
+j&
+relu_2
+
+
+batch_size
+@
+j-
+	unsqueeze 
+
+
+batch_size
+@
+
+j(
+mean 
+
+
+batch_size
+@
+
+j'
+squeeze
+
+
+batch_size
+@
+j 
+view
+
+
+batch_size
+@Ç°
+0pkg.torch.export.ExportedProgram.graph_signatureÏ
+# inputs
+p_features_0_weight: PARAMETER target='features.0.weight'
+p_features_0_bias: PARAMETER target='features.0.bias'
+p_features_1_weight: PARAMETER target='features.1.weight'
+p_features_1_bias: PARAMETER target='features.1.bias'
+p_features_3_weight: PARAMETER target='features.3.weight'
+p_features_3_bias: PARAMETER target='features.3.bias'
+p_features_5_weight: PARAMETER target='features.5.weight'
+p_features_5_bias: PARAMETER target='features.5.bias'
+p_classifier_weight: PARAMETER target='classifier.weight'
+p_classifier_bias: PARAMETER target='classifier.bias'
+b_features_0_running_mean: BUFFER target='features.0.running_mean' persistent=True
+b_features_0_running_var: BUFFER target='features.0.running_var' persistent=True
+b_features_0_num_batches_tracked: BUFFER target='features.0.num_batches_tracked' persistent=True
+x: USER_INPUT
+
+# outputs
+linear: USER_OUTPUT
+ÇJ
+2pkg.torch.export.ExportedProgram.range_constraints{s77: VR[0, int_oo]}B
+ 

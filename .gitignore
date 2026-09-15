@@ -1,0 +1,53 @@
+# Environments
+venv/
+.venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Node.js
+node_modules/
+npm-debug.log
+dashboard/dist/
+dashboard/build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# RAVEN Datasets & Output
+# We ignore the contents but keep the directories using .gitkeep where possible
+UCI-HAR_Dataset/
+data/synthetic/*.csv
+data/processed/*.csv
+data/processed/*.npy
+data/processed/*.npz
+data/external/*
+!data/external/.gitkeep
+!data/synthetic/.gitkeep
+!data/processed/.gitkeep
+
+# Logs
+logs/*.log
+*.log
+
+# QNX (Protect proprietary files just in case)
+qnx800/
+QNX Software Center/
+*.qnx
+*.bsp

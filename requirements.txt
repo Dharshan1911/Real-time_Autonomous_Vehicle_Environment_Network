@@ -1,0 +1,10 @@
+pandas==2.3.3
+numpy==2.2.6
+scikit-learn==1.7.2
+xgboost==3.2.0
+torch==2.14.0+cpu
+onnx==1.22.0
+onnxruntime==1.23.2
+onnxscript==0.7.2
+pytest==9.1.1
+joblib==1.6.0
