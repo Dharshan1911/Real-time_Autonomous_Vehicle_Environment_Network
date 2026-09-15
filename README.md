@@ -21,38 +21,38 @@ To ensure the safety and reliability of mission-critical robotic systems, a laye
 ## 5. System Architecture
 ```mermaid
 flowchart TD
-    subgraph SENSORS [Sensor Layer]
-        DHT[DHT11 - Thermal]
-        MPU[MPU6050 - IMU]
-        ULTRA[HC-SR04 - Ultrasonic]
-        PIR[PIR - Motion]
+    subgraph SENSORS ["Sensor Layer"]
+        DHT["DHT11 - Thermal"]
+        MPU["MPU6050 - IMU"]
+        ULTRA["HC-SR04 - Ultrasonic"]
+        PIR["PIR - Motion"]
     end
 
-    subgraph ENGINE [Simulation Layer (Current)]
-        SIM[Synthetic Telemetry Engine]
+    subgraph ENGINE ["Simulation Layer (Current)"]
+        SIM["Synthetic Telemetry Engine"]
     end
 
-    subgraph QNX [Hardware Layer (Future)]
-        DRIVER[QNX sensor_bridge.c]
+    subgraph QNX ["Hardware Layer (Future)"]
+        DRIVER["QNX sensor_bridge.c"]
     end
 
-    subgraph AI [AI & Machine Learning]
-        FEAT[Feature Engineering]
-        ISO[Isolation Forest]
-        XGB[XGBoost Classifier]
-        CNN[1D CNN]
+    subgraph AI ["AI & Machine Learning"]
+        FEAT["Feature Engineering"]
+        ISO["Isolation Forest"]
+        XGB["XGBoost Classifier"]
+        CNN["1D CNN"]
     end
 
-    subgraph AGENTS [Multi-Agent System]
-        FUSION[Fusion Agent]
-        DECISION[Decision Agent]
-        RECOVERY[Recovery Agent]
-        VERIFY[Verification Agent]
+    subgraph AGENTS ["Multi-Agent System"]
+        FUSION["Fusion Agent"]
+        DECISION["Decision Agent"]
+        RECOVERY["Recovery Agent"]
+        VERIFY["Verification Agent"]
     end
 
-    subgraph UI [Frontend]
-        API[FastAPI SSE]
-        DASH[React Dashboard]
+    subgraph UI ["Frontend"]
+        API["FastAPI SSE"]
+        DASH["React Dashboard"]
     end
 
     SENSORS -.- QNX
